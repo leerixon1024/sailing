@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.spinnaker.sailing.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_inputCourseFragment"
+            app:destination="@id/inputCourseFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_maintSubmenuFragment"
+            app:destination="@id/maintSubmenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputCourseFragment"
+        android:name="com.spinnaker.sailing.InputCourseFragment"
+        android:label="fragment_input_course"
+        tools:layout="@layout/fragment_input_course" >
+        <action
+            android:id="@+id/action_inputCourseFragment_to_setWindFragment"
+            app:destination="@id/setWindFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setWindFragment"
+        android:name="com.spinnaker.sailing.SetWindFragment"
+        android:label="fragment_set_wind"
+        tools:layout="@layout/fragment_set_wind" >
+        <action
+            android:id="@+id/action_setWindFragment_to_checkLineFragment"
+            app:destination="@id/checkLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkLineFragment"
+        android:name="com.spinnaker.sailing.CheckLineFragment"
+        android:label="fragment_check_line"
+        tools:layout="@layout/fragment_check_line" >
+        <action
+            android:id="@+id/action_checkLineFragment_to_stopwatchFragment"
+            app:destination="@id/stopwatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stopwatchFragment"
+        android:name="com.spinnaker.sailing.StopwatchFragment"
+        android:label="fragment_stopwatch"
+        tools:layout="@layout/fragment_stopwatch" >
+        <action
+            android:id="@+id/action_stopwatchFragment_to_windAngleTurnaroundFragment"
+            app:destination="@id/windAngleTurnaroundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/windAngleTurnaroundFragment"
+        android:name="com.spinnaker.sailing.WindAngleTurnaroundFragment"
+        android:label="fragment_wind_angle_turnaround"
+        tools:layout="@layout/fragment_wind_angle_turnaround" >
+        <action
+            android:id="@+id/action_windAngleTurnaroundFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.spinnaker.sailing.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_legFragment2"
+            app:destination="@id/legFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/legFragment"
+        android:name="com.spinnaker.sailing.LegFragment"
+        android:label="fragment_leg"
+        tools:layout="@layout/fragment_leg" >
+        <action
+            android:id="@+id/action_legFragment2_to_nextLegFragment"
+            app:destination="@id/nextLegFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextLegFragment"
+        android:name="com.spinnaker.sailing.NextLegFragment"
+        android:label="fragment_next_leg"
+        tools:layout="@layout/fragment_next_leg" >
+        <action
+            android:id="@+id/action_nextLegFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.spinnaker.sailing.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" />
+    <fragment
+        android:id="@+id/maintBoatFragment"
+        android:name="com.spinnaker.sailing.MaintBoatFragment"
+        android:label="fragment_maint_boat"
+        tools:layout="@layout/fragment_maint_boat" >
+        <action
+            android:id="@+id/action_maintBoatFragment_to_maintTackAngleFragment"
+            app:destination="@id/maintTackAngleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/maintSubmenuFragment"
+        android:name="com.spinnaker.sailing.MaintSubmenuFragment"
+        android:label="fragment_maint_sub"
+        tools:layout="@layout/fragment_maint_submenu" >
+        <action
+            android:id="@+id/action_maintSubmenuFragment_to_maintBoatFragment"
+            app:destination="@id/maintBoatFragment" />
+        <action
+            android:id="@+id/action_maintSubmenuFragment_to_maintCourseFragment"
+            app:destination="@id/maintCourseFragment" />
+        <action
+            android:id="@+id/action_maintSubmenuFragment_to_maintMarkFragment"
+            app:destination="@id/maintMarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/maintCourseFragment"
+        android:name="com.spinnaker.sailing.MaintCourseFragment"
+        android:label="fragment_maint_course"
+        tools:layout="@layout/fragment_maint_course" />
+    <fragment
+        android:id="@+id/maintMarkFragment"
+        android:name="com.spinnaker.sailing.MaintMarkFragment"
+        android:label="fragment_maint_mark"
+        tools:layout="@layout/fragment_maint_mark" />
+    <fragment
+        android:id="@+id/maintTackAngleFragment"
+        android:name="com.spinnaker.sailing.MaintTackAngleFragment"
+        android:label="fragment_maint_wind_angle"
+        tools:layout="@layout/fragment_maint_wind_angle" />
+
+
+</navigation>

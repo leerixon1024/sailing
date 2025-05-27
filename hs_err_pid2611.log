@@ -1,0 +1,137 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f1d48a239ab, pid=2611, tid=2631
+#
+# JRE version: OpenJDK Runtime Environment (17.0.10) (build 17.0.10+0-17.0.10b1087.21-11572160)
+# Java VM: OpenJDK 64-Bit Server VM (17.0.10+0-17.0.10b1087.21-11572160, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# V  [libjvm.so+0xe239ab]  PerfLongVariant::sample()+0x1b
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/sbin/crash_reporter --user=%P:%s:%u:%g:%f" (or dumping to /home/leerixon54/AndroidStudioProjects/Sailing/core.2611)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -javaagent:/home/leerixon54/.gradle/wrapper/dists/gradle-8.6-bin/afr5mpiioh2wthjmwnkmdsd5w/gradle-8.6/lib/agents/gradle-instrumentation-agent-8.6.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.6
+
+Host: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 8 cores, 14G, Debian GNU/Linux 12 (bookworm)
+Time: Mon Jun 24 16:27:09 2024 EDT elapsed time: 169.342430 seconds (0d 0h 2m 49s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f1d40199740):  WatcherThread [stack: 0x00007f1d28100000,0x00007f1d28200000] [id=2631]
+
+Stack: [0x00007f1d28100000,0x00007f1d28200000],  sp=0x00007f1d281fed60,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xe239ab]  PerfLongVariant::sample()+0x1b
+V  [libjvm.so+0xf39c1e]  StatSamplerTask::task()+0x2e
+V  [libjvm.so+0xfb7c70]  PeriodicTask::real_time_tick(int)+0x90
+V  [libjvm.so+0xdc8e99]  WatcherThread::run()+0x59
+V  [libjvm.so+0xfea777]  Thread::call_run()+0xa7
+V  [libjvm.so+0xdee7ba]  thread_native_entry(Thread*)+0x11a
+
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007f1d48eb54d8
+
+Registers:
+RAX=0x0000002760cd13a7, RBX=0x00007f1d4002ac90, RCX=0x00007f1d48eb54d8, RDX=0x0000000034a9602c
+RSP=0x00007f1d281fed60, RBP=0x00007f1d281fed70, RSI=0x00007f1d281fed30, RDI=0x7fffffffffffffff
+R8 =0x0000000000000010, R9 =0x00007ffede1f10b0, R10=0x00007ffede1f1080, R11=0x0000000000189352
+R12=0x0000000000000001, R13=0x00007f1d48e10e40, R14=0x0000000000000000, R15=0x0000000000000032
+RIP=0x00007f1d48a239ab, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000007
+  TRAPNO=0x000000000000000e
+
+
+Register to memory mapping:
+
+RAX=0x0000002760cd13a7 is an unknown value
+RBX=0x00007f1d4002ac90 points into unknown readable memory: 0x00007f1d48d9da98 | 98 da d9 48 1d 7f 00 00
+RCX=0x00007f1d48eb54d8 points into unknown readable memory: 0x000000275dd0a5f0 | f0 a5 d0 5d 27 00 00 00
+RDX=0x0000000034a9602c is an unknown value
+RSP=0x00007f1d281fed60 points into unknown readable memory: 0x00007f1d48d9da98 | 98 da d9 48 1d 7f 00 00
+RBP=0x00007f1d281fed70 points into unknown readable memory: 0x00007f1d281fed90 | 90 ed 1f 28 1d 7f 00 00
+RSI=0x00007f1d281fed30 points into unknown readable memory: 0x0000000000000574 | 74 05 00 00 00 00 00 00
+RDI=0x7fffffffffffffff is an unknown value
+R8 =0x0000000000000010 is an unknown value
+R9 =0x00007ffede1f10b0 points into unknown readable memory: 0x0000000000000575 | 75 05 00 00 00 00 00 00
+R10=0x00007ffede1f1080 points into unknown readable memory: 0x00000001001894d4 | d4 94 18 00 01 00 00 00
+R11=0x0000000000189352 is an unknown value
+R12=0x0000000000000001 is an unknown value
+R13=0x00007f1d48e10e40: <offset 0x0000000001210e40> in /opt/android-studio/jbr/lib/server/libjvm.so at 0x00007f1d47c00000
+R14=0x0 is NULL
+R15=0x0000000000000032 is an unknown value
+
+
+Top of Stack: (sp=0x00007f1d281fed60)
+0x00007f1d281fed60:   00007f1d48d9da98
+0x00007f1d281fed70:   00007f1d281fed900x00007f1d281fed80:   0000000000000002 0000000000000032
+0x00007f1d281fed90:   00007f1d281fedd0 00007f1d48bb7c70
+0x00007f1d281feda0:   00007f1d40026860 00007f1d40199740
+0x00007f1d281fedb0:   ffffffffffffff80 0000000000000016
+0x00007f1d281fedc0:   0000000000000032 00007f1d28100000
+0x00007f1d281fedd0:   00007f1d281fee50 00007f1d489c8e99
+0x00007f1d281fede0:   00007f1ce4000030 00007f1d40199740
+0x00007f1d281fedf0:   ffffffffffffff80 0e2a67e95ae9b200
+0x00007f1d281fee00:   0000003000000020 00007f1d281fee30
+0x00007f1d281fee10:   00007f1d281fee50 ffffffffffffff80
+0x00007f1d281fee20:   0000000000000016 00007f1d40199740
+0x00007f1d281fee30:   ffffffffffffff80 0000000000000016
+0x00007f1d281fee40:   0000000000100000 00007f1d28100000
+0x00007f1d281fee50:   00007f1d281feea0 00007f1d48bea777
+0x00007f1d281fee60:   00007f1d403a3440 00007f1d40199740
+0x00007f1d281fee70:   00007f1d281feea0 00007f1d489b6176
+0x00007f1d281fee80:   0000000000000001 00007f1d40199740
+0x00007f1d281fee90:   00007f1d403a3440 00007f1d4002b140
+0x00007f1d281feea0:   00007f1d281feed0 00007f1d489ee7ba
+0x00007f1d281feeb0:   00007f1d281ff6c0 00007f1d281ff6c0
+0x00007f1d281feec0:   00007f1d47bfe970 00007f1d280ff000
+0x00007f1d281feed0:   0000000000000000 00007f1d49080134
+0x00007f1d281feee0:   0000000000000000 00007f1d281ff6c0
+0x00007f1d281feef0:   00007f1d281ff6c0 2cc5f236d746584d
+0x00007f1d281fef00:   ffffffffffffff80 0000000000000016
+0x00007f1d281fef10:   00007f1d47bfe970 00007f1d280ff000
+0x00007f1d281fef20:   d2ffa2090a86584d d2ff60392924584d
+0x00007f1d281fef30:   0000000000000000 0000000000000000
+0x00007f1d281fef40:   0000000000000000 0000000000000000
+0x00007f1d281fef50:   0000000000000000 0e2a67e95ae9b200 
+
+Instructions: (pc=0x00007f1d48a239ab)
+0x00007f1d48a238ab:   00 00 00 00 00 55 48 89 e5 48 89 f0 48 63 f2 48
+0x00007f1d48a238bb:   8b 4f 28 48 8b 09 48 8d 15 ea a1 4a ff 48 89 c7
+0x00007f1d48a238cb:   31 c0 5d e9 4d 54 2c 00 66 66 66 66 2e 0f 1f 84
+0x00007f1d48a238db:   00 00 00 00 00 55 48 89 e5 41 56 53 4c 89 cb 49
+0x00007f1d48a238eb:   89 fe e8 de fc ff ff 48 8d 05 1f a0 37 00 49 89
+0x00007f1d48a238fb:   06 ba 08 00 00 00 4c 89 f7 be 0b 00 00 00 31 c9
+0x00007f1d48a2390b:   e8 f0 fd ff ff 48 8d 05 31 a0 37 00 49 89 06 49
+0x00007f1d48a2391b:   89 5e 30 49 c7 46 38 00 00 00 00 5b 41 5e 5d c3
+0x00007f1d48a2392b:   0f 1f 44 00 00 55 48 89 e5 41 56 53 4c 89 cb 49
+0x00007f1d48a2393b:   89 fe e8 8e fc ff ff 48 8d 05 cf 9f 37 00 49 89
+0x00007f1d48a2394b:   06 ba 08 00 00 00 4c 89 f7 be 0b 00 00 00 31 c9
+0x00007f1d48a2395b:   e8 a0 fd ff ff 48 8d 05 e1 9f 37 00 49 89 06 49
+0x00007f1d48a2396b:   c7 46 30 00 00 00 00 49 89 5e 38 48 85 db 74 0f
+0x00007f1d48a2397b:   48 8b 03 48 89 df ff 10 49 8b 4e 28 48 89 01 5b
+0x00007f1d48a2398b:   41 5e 5d c3 90 55 48 89 e5 53 50 48 89 fb 48 8b
+0x00007f1d48a2399b:   7f 38 48 85 ff 74 0c 48 8b 07 ff 10 48 8b 4b 28
+0x00007f1d48a239ab:   48 89 01 48 83 c4 08 5b 5d c3 66 66 2e 0f 1f 84
+0x00007f1d48a239bb:   00 00 00 00 00 55 48 89 e5 41 56 53 44 89 cb 49
+0x00007f1d48a239cb:   89 fe e8 fe fb ff ff 48 8d 05 cf 9f 37 00 49 89
+0x00007f1d48a239db:   06 41 89 5e 30 48 63 cb ba 01 00 00 00 4c 89 f7
+0x00007f1d48a239eb:   be 08 00 00 00 5b 41 5e 5d e9 07 fd ff ff 0f 1f
+0x00007f1d48a239fb:   80 00 00 00 00 55 48 89 e5 53 50 48 89 fb 48 8b
+0x00007f1d48a23a0b:   7f 28 48 85 f6 48 8d 05 46 49 45 ff 48 0f 44 f0
+0x00007f1d48a23a1b:   48 63 53 30 e8 fc 53 2c 00 48 8b 43 28 48 63 4b
+0x00007f1d48a23a2b:   30 c6 44 01 ff 00 48 83 c4 08 5b 5d c3 0f 1f 84
+0x00007f1d48a23a3b:   00 00 00 00 00 55 48 89 e5 48 89 f0 48 63 f2 48
+0x00007f1d48a23a4b:   8b 4f 28 48 8d 15 c0 f1 46 ff 48 89 c7 31 c0 5d
+0x00007f1d48a23a5b:   e9 c0 52 2c 00 55 48 89 e5 41 57 41 56 41 55 41
+0x00007f1d48a23a6b:   54 53 50 49 89 d7 41 89 f4 48 89 fb 48 85 c9 0f
+0x00007f1d48a23a7b:   84 85 00 00 00 49 89 ce 48 89 cf e8 c5 52 2c 00
+0x00007f1d48a23a8b:   ff c0 48 8d 0d c4 e2 38 00 44 8b 29 41 ff c5 44
+0x00007f1d48a23a9b:   39 e8 44 0f 4c e8 48 89 df 44 89 e6 4c 89 fab9 
+
+
+Stack slot to memory mapping:

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Sailing</string>
+    <string name="maintenance_track">Maintenance</string>
+    <string name="mark_maintenance">Maintain Mark</string>
+    <string name="course_maintenance">Maintain Course</string>
+    <string name="boat_maintenance">Maintain Boat</string>
+    <string name="leg_fragment">Leg</string>
+    <string name="mark_fragment">Mark</string>
+    <string name="mark_maintenance_fragment">Maintain Mark</string>
+    <string name="course_maintenance_fragment">Maintain Course</string>
+    <string name="set_wind_fragment">Set Wind</string>
+    <string name="stopwatch_fragment">Stopwatch</string>
+    <string name="WATM_fragment">WATM</string>
+    <string name="wind_angle_maintenance_fragment">Maintain Wind Angle</string>
+    <string name="input_course_fragment">Input Course</string>
+    <string name="next_leg_fragment">Next Leg</string>
+    <string name="start_fragment">Start</string>
+    <string name="check_line_fragment">Check Line</string>
+    <string name="finish_fragment">Finish</string>
+    <string name="main">Main</string>
+    <string name="race">Race</string>
+    <string name="home">Home</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="hello_blank_fragment">Blank fragment</string>
+    <string name="left_nav">Back</string>
+    <string name="right_nav">Next</string>
+    <string name="background_image">background</string>
+    <string name="title_activity_leftnavigate">leftnavigate</string>
+    <string name="title_activity_left_navigate">LeftNavigate</string>
+    <string name="title_activity_right_navigate">RightNavigate</string>
+    <string name="alpha_sub_screen">0.4</string>
+    <string name="start_timer">start timer</string>
+    <string name="stop_timer">stop timer</string>
+    <string name="wat">set turnaround</string>
+    <string name="timer_1_minute">set 1 minute</string>
+    <string name="timer_4_minutes">set 4 minutes</string>
+    <string name="timer_5_minutes">set 5 minutes</string>
+    <string name="background">background</string>
+    <string name="min5">5 : 00</string>
+    <string name="min4">4 : 00</string>
+    <string name="min1">1 : 00</string>
+    <string name="min0">0 : 00</string>
+    <string name="logo">logo</string>
+    <string name="add_new">Add New</string>
+    <string name="delete_selected">Delete Selected</string>
+    <string name="update_selected">Update Selected</string>
+
+
+</resources>
