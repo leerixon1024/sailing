@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Sailing" parent="Theme.AppCompat.Light.DarkActionBar" />
+    <style name="Theme.Sailing" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Make all buttons outlined by default -->
+        <item name="materialButtonStyle">@style/Widget.App.Button.Outlined</item>
+    </style>
+
+    <style name="Widget.App.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/dark_blue</item>
+        <item name="backgroundTint">@color/logo_yellow_20_opacity</item>
+    </style>
 
 </resources>

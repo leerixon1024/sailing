@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerInside"
         android:alpha="@string/alpha_sub_screen"
-        android:src="@drawable/mainlogo"
+        android:src="@drawable/mainlogoscr"
         />
 
 <LinearLayout
@@ -36,5 +36,13 @@
         android:text="@string/maintenance"
 
         />
+
+    <Button
+        android:id="@+id/analysis_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/analysis" />
 </LinearLayout>
 </FrameLayout>

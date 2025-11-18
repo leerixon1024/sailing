@@ -27,13 +27,15 @@ class MainFragment : Fragment(), View.OnClickListener {
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.race_btn).setOnClickListener(this)
         view.findViewById<Button>(R.id.maintenance_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.analysis_btn).setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.race_btn -> navController!!.navigate(R.id.action_mainFragment_to_inputCourseFragment)
+            R.id.race_btn -> navController!!.navigate(R.id.action_mainFragment_to_setUpRaceFragment)
             R.id.maintenance_btn -> navController!!.navigate(R.id.action_mainFragment_to_maintSubmenuFragment)
+            R.id.analysis_btn -> navController!!.navigate(R.id.action_mainFragment_to_analysisFragment)
 
         }
     }

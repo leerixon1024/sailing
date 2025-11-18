@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CheckCurrentFragment">
+
+    <TextView
+        android:id="@+id/textView_timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_remaining" />
+
+    <TextView
+        android:id="@+id/textView_timer_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textView_timer_label"
+        android:layout_marginStart="8dp"
+        android:text="@string/_00_30" />
+
+    <LinearLayout
+        android:id="@+id/button_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_timer_label"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_start_north"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_north" />
+
+        <Button
+            android:id="@+id/button_start_east"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_east" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_grid_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_grid"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_start_south"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_south" />
+
+        <Button
+            android:id="@+id/button_start_west"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start West" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView_north_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_grid_2"
+        android:layout_marginTop="24dp"
+        android:text="@string/north_result_not_run" />
+
+    <TextView
+        android:id="@+id/textView_east_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_north_result"
+        android:layout_marginTop="8dp"
+        android:text="@string/east_result_not_run" />
+
+    <TextView
+        android:id="@+id/textView_south_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_east_result"
+        android:layout_marginTop="8dp"
+        android:text="@string/south_result_not_run" />
+
+    <TextView
+        android:id="@+id/textView_west_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_south_result"
+        android:layout_marginTop="8dp"
+        android:text="@string/west_result_not_run" />
+
+    <TextView
+        android:id="@+id/textView_average_current_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_west_result"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Current: 1.2kn @ 180°" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_controlbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/left_nav"
+            android:src="@drawable/leftarrowclick" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/home"
+            android:src="@drawable/home_button"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/right_nav"
+            android:src="@drawable/rightarrowclick" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

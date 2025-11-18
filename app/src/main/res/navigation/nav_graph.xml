@@ -12,97 +12,162 @@
         tools:layout="@layout/fragment_main" >
 
         <action
-            android:id="@+id/action_mainFragment_to_inputCourseFragment"
-            app:destination="@id/inputCourseFragment" />
+            android:id="@+id/action_mainFragment_to_setUpRaceFragment"
+            app:destination="@id/setUpRaceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_mainFragment_to_maintSubmenuFragment"
-            app:destination="@id/maintSubmenuFragment" />
+            app:destination="@id/maintSubmenuFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_analysisFragment"
+            app:destination="@id/analysisFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
-        android:id="@+id/inputCourseFragment"
-        android:name="com.spinnaker.sailing.InputCourseFragment"
-        android:label="fragment_input_course"
-        tools:layout="@layout/fragment_input_course" >
+        android:id="@+id/setUpRaceFragment"
+        android:name="com.spinnaker.sailing.SetUpRaceFragment"
+        android:label="fragment_set_up_race"
+        tools:layout="@layout/fragment_set_up_race" >
         <action
-            android:id="@+id/action_inputCourseFragment_to_setWindFragment"
-            app:destination="@id/setWindFragment" />
+            android:id="@+id/action_setUpRaceFragment_to_checkCurrentFragment"
+            app:destination="@id/checkCurrentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/setWindFragment"
-        android:name="com.spinnaker.sailing.SetWindFragment"
-        android:label="fragment_set_wind"
-        tools:layout="@layout/fragment_set_wind" >
+        android:id="@+id/checkCurrentFragment"
+        android:name="com.spinnaker.sailing.CheckCurrentFragment"
+        android:label="fragment_check_current"
+        tools:layout="@layout/fragment_check_current" >
         <action
-            android:id="@+id/action_setWindFragment_to_checkLineFragment"
-            app:destination="@id/checkLineFragment" />
+            android:id="@+id/action_checkCurrentFragment_to_startRaceFragment"
+            app:destination="@id/startRaceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/setUpRaceFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/checkLineFragment"
-        android:name="com.spinnaker.sailing.CheckLineFragment"
-        android:label="fragment_check_line"
-        tools:layout="@layout/fragment_check_line" >
+        android:id="@+id/startRaceFragment"
+        android:name="com.spinnaker.sailing.StartRaceFragment"
+        android:label="fragment_start_race"
+        tools:layout="@layout/fragment_start_race" >
         <action
-            android:id="@+id/action_checkLineFragment_to_stopwatchFragment"
-            app:destination="@id/stopwatchFragment" />
+            android:id="@+id/action_startRaceFragment_to_inProgressRaceFragment1"
+            app:destination="@id/inProgressRaceFragment1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/startRaceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_startRaceFragment_to_setUpRaceFragment"
+            app:destination="@id/setUpRaceFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/stopwatchFragment"
-        android:name="com.spinnaker.sailing.StopwatchFragment"
-        android:label="fragment_stopwatch"
-        tools:layout="@layout/fragment_stopwatch" >
+        android:id="@+id/inProgressRaceFragment"
+        android:name="com.spinnaker.sailing.InProgressRaceFragment"
+        android:label="fragment_in_progress_race"
+        tools:layout="@layout/fragment_in_progress_race" >
         <action
-            android:id="@+id/action_stopwatchFragment_to_windAngleTurnaroundFragment"
-            app:destination="@id/windAngleTurnaroundFragment" />
+            android:id="@+id/action_inProgressRaceFragment_to_inProgressRaceFragment1"
+            app:destination="@id/inProgressRaceFragment1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/windAngleTurnaroundFragment"
-        android:name="com.spinnaker.sailing.WindAngleTurnaroundFragment"
-        android:label="fragment_wind_angle_turnaround"
-        tools:layout="@layout/fragment_wind_angle_turnaround" >
+        android:id="@+id/inProgressRaceFragment1"
+        android:name="com.spinnaker.sailing.InProgressRaceFragment1"
+        android:label="fragment_in_progress_race1"
+        tools:layout="@layout/fragment_in_progress_race1" >
         <action
-            android:id="@+id/action_windAngleTurnaroundFragment_to_startFragment"
-            app:destination="@id/startFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/startFragment"
-        android:name="com.spinnaker.sailing.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
+            android:id="@+id/action_inProgressRaceFragment1_to_inProgressRaceFragment"
+            app:destination="@id/inProgressRaceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_startFragment_to_legFragment2"
-            app:destination="@id/legFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/legFragment"
-        android:name="com.spinnaker.sailing.LegFragment"
-        android:label="fragment_leg"
-        tools:layout="@layout/fragment_leg" >
+            android:id="@+id/action_inProgressRaceFragment1_to_inProgressRaceFragment2"
+            app:destination="@id/inProgressRaceFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_legFragment2_to_nextLegFragment"
-            app:destination="@id/nextLegFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/nextLegFragment"
-        android:name="com.spinnaker.sailing.NextLegFragment"
-        android:label="fragment_next_leg"
-        tools:layout="@layout/fragment_next_leg" >
+            android:id="@+id/action_inProgressRaceFragment1_to_startRaceFragment"
+            app:destination="@id/startRaceFragment" />
         <action
-            android:id="@+id/action_nextLegFragment_to_finishFragment"
+            android:id="@+id/action_inProgressRaceFragment1_to_finishFragment"
             app:destination="@id/finishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inProgressRaceFragment2"
+        android:name="com.spinnaker.sailing.InProgressRaceFragment2"
+        android:label="fragment_in_progress_race2"
+        tools:layout="@layout/fragment_in_progress_race2" >
+        <action
+            android:id="@+id/action_inProgressRaceFragment2_to_inProgressRaceFragment1"
+            app:destination="@id/inProgressRaceFragment1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_inProgressRaceFragment2_to_finishFragment"
+            app:destination="@id/finishFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/finishFragment"
         android:name="com.spinnaker.sailing.FinishFragment"
         android:label="fragment_finish"
-        tools:layout="@layout/fragment_finish" />
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/action_finishFragment_to_inProgressRaceFragment2"
+            app:destination="@id/inProgressRaceFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/maintBoatFragment"
         android:name="com.spinnaker.sailing.MaintBoatFragment"
         android:label="fragment_maint_boat"
         tools:layout="@layout/fragment_maint_boat" >
+
         <action
-            android:id="@+id/action_maintBoatFragment_to_maintTackAngleFragment"
-            app:destination="@id/maintTackAngleFragment" />
+            android:id="@+id/action_maintBoatFragment_to_maintainIndividualBoatFragment"
+            app:destination="@id/maintainIndividualBoatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/maintSubmenuFragment"
@@ -111,29 +176,160 @@
         tools:layout="@layout/fragment_maint_submenu" >
         <action
             android:id="@+id/action_maintSubmenuFragment_to_maintBoatFragment"
-            app:destination="@id/maintBoatFragment" />
+            app:destination="@id/maintBoatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_maintSubmenuFragment_to_maintCourseFragment"
-            app:destination="@id/maintCourseFragment" />
+            app:destination="@id/maintCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_maintSubmenuFragment_to_maintMarkFragment"
-            app:destination="@id/maintMarkFragment" />
+            app:destination="@id/maintMarkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_maintSubmenuFragment_to_raceLogFragment"
+            app:destination="@id/raceLogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/maintCourseFragment"
         android:name="com.spinnaker.sailing.MaintCourseFragment"
         android:label="fragment_maint_course"
-        tools:layout="@layout/fragment_maint_course" />
+        tools:layout="@layout/fragment_maint_course" >
+        <action
+            android:id="@+id/action_maintCourseFragment_to_maintainIndividualCourseFragment"
+            app:destination="@id/maintainIndividualCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/maintMarkFragment"
         android:name="com.spinnaker.sailing.MaintMarkFragment"
         android:label="fragment_maint_mark"
-        tools:layout="@layout/fragment_maint_mark" />
+        tools:layout="@layout/fragment_maint_mark" >
+        <action
+            android:id="@+id/action_maintMarkFragment_to_maintainIndividualMarkFragment"
+            app:destination="@id/maintainIndividualMarkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
-        android:id="@+id/maintTackAngleFragment"
-        android:name="com.spinnaker.sailing.MaintTackAngleFragment"
-        android:label="fragment_maint_wind_angle"
-        tools:layout="@layout/fragment_maint_wind_angle" />
+        android:id="@+id/maintainIndividualBoatFragment"
+        android:name="com.spinnaker.sailing.MaintainIndividualBoatFragment"
+        android:label="fragment_maintain_individual_boat"
+        tools:layout="@layout/fragment_maintain_individual_boat" >
+        <action
+            android:id="@+id/action_maintainIndividualBoatFragment_to_maintainPerformanceDataFragment"
+            app:destination="@id/maintainPerformanceDataFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+    android:id="@+id/maintainPerformanceDataFragment"
+    android:name="com.spinnaker.sailing.MaintainPerformanceDataFragment"
+    android:label="fragment_maintain_performance_data"
+    tools:layout="@layout/fragment_maint_performancedata" >
+        <action
+            android:id="@+id/action_maintainPerformanceDataFragment_to_maintainIndividualPerformanceFragment"
+            app:destination="@id/maintainIndividualPerformanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/maintainIndividualPerformanceFragment"
+        android:name="com.spinnaker.sailing.MaintainIndividualPerformanceFragment"
+        android:label="fragment_maintain_individual_performance"
+        tools:layout="@layout/fragment_maintain_individual_performance" >
+        <action
+            android:id="@+id/action_maintainIndividualPerformanceFragment_to_maintainPerformanceDataFragment"
+            app:destination="@id/maintainPerformanceDataFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/maintainIndividualMarkFragment"
+        android:name="com.spinnaker.sailing.MaintainIndividualMarkFragment"
+        android:label="maintainindividualmarkfragment"
+        tools:layout="@layout/maintainindividualmarkfragment" >
+        <argument
+            android:name="markId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_maintainIndividualMarkFragment_to_maintMarkFragment"
+            app:destination="@id/maintMarkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/maintainIndividualCourseFragment"
+        android:name="com.spinnaker.sailing.MaintainIndividualCourseFragment"
+        android:label="fragment_maintain_individual_course"
+        tools:layout="@layout/fragment_maintain_individual_course" >
+        <action
+            android:id="@+id/action_maintainIndividualCourseFragment_to_maintCourseFragment"
+            app:destination="@id/maintCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/raceLogFragment"
+        android:name="com.spinnaker.sailing.RaceLogFragment"
+        android:label="RaceLogFragment"
+        tools:layout="@layout/fragment_race_log" />
 
+    <fragment
+        android:id="@+id/analysisFragment"
+        android:name="com.spinnaker.sailing.AnalysisFragment"
+        android:label="AnalysisFragment"
+        tools:layout="@layout/fragment_analysis" >
+        <action
+            android:id="@+id/action_analysisFragment_to_setAnalysisParametersFragment"
+            app:destination="@id/setAnalysisParametersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/setAnalysisParametersFragment"
+        android:name="com.spinnaker.sailing.SetAnalysisParametersFragment"
+        android:label="SetAnalysisParametersFragment"
+        tools:layout="@layout/fragment_set_analysis_parameters" >
+        <action
+            android:id="@+id/action_setAnalysisParametersFragment_to_analysisFragment"
+            app:destination="@id/analysisFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
 </navigation>

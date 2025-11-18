@@ -7,9 +7,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/logo"
         android:scaleType="centerInside"
         android:alpha="@string/alpha_sub_screen"
-        android:src="@drawable/mainlogo"
+        android:src="@drawable/mainlogoscr"
         />
 
     <RelativeLayout
@@ -35,7 +36,7 @@
             android:layout_alignParentBottom="true"
             android:background="@android:color/transparent"
             android:contentDescription="@string/home"
-            android:src="@drawable/home" />
+            android:src="@drawable/home_button" />
 
         <ImageButton
             android:id="@+id/right_btn"

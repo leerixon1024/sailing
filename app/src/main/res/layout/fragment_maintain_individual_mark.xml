@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaintainIndividualMarkFragment"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="@string/alpha_sub_screen"
+        android:contentDescription="@string/logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/mainlogoscr" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/title_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_course_maintenance_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/maintain_individual_mark"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewMarkNamelabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/MarkName"
+                app:boxBackgroundMode="none">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewMarkName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent_white_50"
+                    android:inputType="text"
+                    android:minHeight="38dp"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="0dp"
+                    tools:text="35" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Latitude Input Fields -->
+            <TextView
+                style="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:labelFor="@+id/editTextLatDegrees"
+                android:text="@string/mark_Latitude" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lat_degrees"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:hint="@string/degrees"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLatDegrees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="numberSigned"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="35" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lat_decimal_minutes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="2"
+                    android:hint="@string/decimal_minutes"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLatDecimalMinutes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="numberDecimal"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="12.345" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lat_hemisphere"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/n_s"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLatHemisphere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="1"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="N" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Longitude Input Fields -->
+            <TextView
+                style="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:labelFor="@+id/editTextLonDegrees"
+                android:text="@string/Longitude" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lon_degrees"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:hint="@string/degrees"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLonDegrees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="numberSigned"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="150" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lon_decimal_minutes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="2"
+                    android:hint="@string/decimal_minutes"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLonDecimalMinutes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="numberDecimal"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="56.789" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lon_hemisphere"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/e_w"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextLonHemisphere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_white_50"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="1"
+                        android:minHeight="38dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="0dp"
+                        tools:text="E" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_ping_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/ping_location" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom_controlbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/left_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/left_nav"
+                    android:src="@drawable/leftarrowclick" />
+
+                <ImageButton
+                    android:id="@+id/home_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/home"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/home_button"
+                    android:text="@string/home" />
+
+                <ImageButton
+                    android:id="@+id/right_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/right_nav"
+                    android:src="@drawable/rightarrowclick" />
+
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/layout_bottom_action_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/layout_bottom_buttons"
+                app:alignItems="flex_start"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start">
+
+                <Button
+                    android:id="@+id/buttonUpdateMark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/update_mark_details" />
+
+                <Button
+                    android:id="@+id/button_add_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:minWidth="48dp"
+                    android:text="@string/add_new" />
+
+                <Button
+                    android:id="@+id/buttonDeleteMark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/delete_selected" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

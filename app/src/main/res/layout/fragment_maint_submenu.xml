@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +11,7 @@
         android:layout_height="match_parent"
         android:alpha="@string/alpha_sub_screen"
         android:scaleType="centerInside"
-        android:src="@drawable/mainlogo" />
+        android:src="@drawable/mainlogoscr" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,13 +30,14 @@
 
         <ImageButton
             android:id="@+id/home_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="46dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
+            android:layout_weight="3"
             android:background="@android:color/transparent"
             android:contentDescription="@string/home"
-            android:src="@drawable/home" />
+            android:gravity="center_horizontal"
+            android:src="@drawable/home_button"
+            android:text="@string/home" />
 
         <ImageButton
             android:id="@+id/right_btn"
@@ -56,30 +58,43 @@
             <Button
                 android:id="@+id/maintMarkFragment"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="150dp"
-                android:text="@string/mark_maintenance" />
+                android:text="@string/mark_maintenance"
+                app:autoSizeTextType="uniform" />
 
             <Button
                 android:id="@+id/maintBoatFragment"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:text="@string/boat_maintenance"
+                app:autoSizeTextType="uniform"
 
                 />
 
             <Button
                 android:id="@+id/maintCourseFragment"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:text="@string/course_maintenance"
+                app:autoSizeTextType="uniform"
 
                 />
+
+            <Button
+                android:id="@+id/manageRaceLogsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Manage Race Logs"
+                app:autoSizeTextType="uniform" />
+
         </LinearLayout>
 
 

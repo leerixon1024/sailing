@@ -45,7 +45,7 @@ class WindAngleTurnaroundFragment : Fragment(), View.OnClickListener{
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.left_btn -> navController.popBackStack()
-            R.id.right_btn -> navController.navigate(R.id.action_windAngleTurnaroundFragment_to_startFragment)
+
             R.id.home_btn -> navController.navigate(R.id.mainFragment)
         }
     }

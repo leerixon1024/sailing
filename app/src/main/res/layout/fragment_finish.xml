@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FinishFragment">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerInside"
-        android:src="@drawable/mainlogo"
         android:alpha="@string/alpha_sub_screen"
-        />
+        android:contentDescription="@string/background_image"
+        android:scaleType="centerInside"
+        android:src="@drawable/mainlogoscr" />
 
     <RelativeLayout
+        android:id="@+id/bottom_controlbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
 
         <ImageButton
             android:id="@+id/left_btn"
@@ -31,11 +34,12 @@
             android:id="@+id/home_btn"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:background="@android:color/transparent"
             android:contentDescription="@string/home"
-            android:src="@drawable/home" />
+            android:src="@drawable/home_button"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/right_btn"
@@ -47,28 +51,48 @@
             android:contentDescription="@string/right_nav"
             android:src="@drawable/rightarrowclick" />
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/middle_section_content_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_controlbar"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
 
             <TextView
-
-
-                android:layout_height="match_parent"
+                android:id="@+id/textView_finish_timer"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="48sp"
+                tools:text="00:00:00" />
 
-                android:layout_marginStart="50dp"
-                android:text="@string/finish_fragment" />
+            <Button
+                android:id="@+id/button_finish_race"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Finish Race" />
 
+            <TextView
+                android:id="@+id/textView_adjusted_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="36sp"
+                tools:text="Adjusted: 00:00:00" />
 
         </LinearLayout>
 
-
-
     </RelativeLayout>
 
-
-
-</FrameLayout>
+</RelativeLayout>

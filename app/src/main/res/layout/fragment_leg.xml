@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerInside"
-        android:src="@drawable/mainlogo"
+        android:src="@drawable/mainlogoscr"
         android:alpha="@string/alpha_sub_screen"
         />
 
@@ -32,11 +32,12 @@
             android:id="@+id/home_btn"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:background="@android:color/transparent"
             android:contentDescription="@string/home"
-            android:src="@drawable/home" />
+            android:src="@drawable/home_button"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/right_btn"

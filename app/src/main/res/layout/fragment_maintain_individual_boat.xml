@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaintainIndividualBoatFragment"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:alpha="@string/alpha_sub_screen"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/mainlogoscr"/>
+    <RelativeLayout
+        android:id="@+id/title_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_individual_boat_maintenance_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/maintain_individual_boat"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/layout_middle_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_group"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/boat_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="#40FFFFFF"
+                    tools:text="Sea Serpent" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatSailNumberlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBoatNameLabel"
+                android:hint="@string/sail_number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatSailNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:inputType="numberDecimal"
+                    android:background="#40FFFFFF"
+                    tools:text="35" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatLOAlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBoatSailNumberlabel"
+                android:hint="@string/boat_LOA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatLOA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:inputType="numberDecimal"
+                    android:background="#40FFFFFF"
+                    tools:text="35" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatPHRFLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBoatLOAlabel"
+                android:hint="@string/PHRF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatPHRF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:inputType="numberDecimal"
+                    android:background="#40FFFFFF"
+                    tools:text="150" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatMakeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBoatPHRFLabel"
+                android:hint="@string/make">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatMake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:inputType="text"
+                    android:background="#40FFFFFF"
+                    tools:text="CS" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textViewBoatModelNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBoatMakeLabel"
+                android:hint="@string/model_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textViewBoatModelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="#40FFFFFF"
+                    tools:text="Merlin" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_controlbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layout_bottom_buttons"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/left_nav"
+                android:src="@drawable/leftarrowclick"
+                tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+            <ImageButton
+                android:id="@+id/home_btn"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="3"
+                android:src="@drawable/home_button"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/home"
+                android:gravity="center_horizontal"
+                android:text="@string/home" />
+
+            <ImageButton
+                android:id="@+id/right_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/right_nav"
+                android:src="@drawable/rightarrowclick"
+                tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_bottom_buttons"
+            android:id="@+id/layout_bottom_action_buttons"
+            app:flexWrap="wrap"
+            app:alignItems="flex_start"
+            app:justifyContent="flex_start">
+
+            <Button
+                android:id="@+id/buttonUpdateBoat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/update_boat_details" />
+
+            <Button
+                android:id="@+id/button_add_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minWidth="48dp"
+                android:text="@string/add_new"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/buttonDeleteBoat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/delete_selected" />
+
+            <Button
+                android:id="@+id/buttonUpdateBoatPolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:text="@string/inputpolarandturn" />
+
+
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

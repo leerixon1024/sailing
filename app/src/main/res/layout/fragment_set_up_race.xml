@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    tools:context=".MaintMarkFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="@string/alpha_sub_screen"
+        android:contentDescription="@string/logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/mainlogoscr" />
+
+    <RelativeLayout
+        android:id="@+id/title_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_race_maintenance_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/race_setup"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_controlbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/left_nav"
+            android:src="@drawable/leftarrowclick"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/home"
+            android:gravity="center_horizontal"
+            android:src="@drawable/home_button"
+            android:text="@string/home" />
+
+        <ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/right_nav"
+            android:src="@drawable/rightarrowclick"
+            tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom_controlbar"
+        android:layout_below="@id/title_group">
+
+        <LinearLayout
+            android:id="@+id/data_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/boat_name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <Spinner
+                    android:id="@+id/boat_name_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:minHeight="48dp"
+                    android:background="#40FFFFFF"
+
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/race_description"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_race_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:inputType="text"
+
+                    android:minHeight="48dp"
+                    android:hint="@string/race_description"
+                    android:background="#40FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/race_date_yyyy_mm_dd"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_race_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:background="#40FFFFFF"
+                    android:inputType="date"
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wind_direction_degrees"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_wind_direction"
+                    android:layout_width="0dp"
+                    android:hint="@string/true_wind_direction"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:background="#40FFFFFF"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wind_strength_knots"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_wind_strength"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:hint="@string/wind_strength_knots"
+                    android:background="#40FFFFFF"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/course_description"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <Spinner
+                    android:id="@+id/course_name_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:minHeight="48dp"
+                    android:background="#40FFFFFF"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/conditions"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <Spinner
+                    android:id="@+id/conditions_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:minHeight="48dp"
+                    android:background="#40FFFFFF"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pin_lat_long"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_pin_lat_long"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1.5"
+                    android:background="#40FFFFFF"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,SpeakableTextPresentCheck" />
+
+                <Button
+                    android:id="@+id/button_pin_ping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pin_ping" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/boat_lat_long"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingEnd="8dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/editText_boat_lat_long"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1.5"
+                    android:background="#40FFFFFF"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,SpeakableTextPresentCheck" />
+
+                <Button
+                    android:id="@+id/button_boat_ping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boat_ping" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_accept_race"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/accept_race" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

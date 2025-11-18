@@ -1,18 +1,23 @@
+
+import org.gradle.api.JavaVersion
+
 plugins {
-    alias(libs.plugins.android.application)
+
+    id("com.android.application") // or com.android.library
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.compose.compiler)
+    id("com.google.devtools.ksp") // If you use KSP
 
 
 }
 
 android {
     namespace = "com.spinnaker.sailing"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.spinnaker.sailing"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,8 +37,7 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
-            )
-        }
+            )        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -44,10 +48,9 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
-    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -56,8 +59,16 @@ android {
 }
 
 dependencies {
-    val nav_version = "2.7.7"
-    val room_version = "2.6.1"
+
+
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.material)
+    implementation(libs.androidx.fragment.ktx)
+    val nav_version = "2.9.0"
+    val room_version = "2.7.1"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -76,13 +87,13 @@ dependencies {
 
 
     // Java language implementation
-    implementation("androidx.navigation:navigation-fragment:$nav_version")
+
     implementation("androidx.navigation:navigation-ui:$nav_version")
 
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
+    implementation(kotlin("stdlib"))     //added by LR for the toRadians problem
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 
@@ -93,7 +104,7 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
     // KSP
-    implementation("com.google.devtools.ksp:symbol-processing-api:1.9.22-1.0.17")
+    implementation("com.google.devtools.ksp:symbol-processing-api:2.1.21-2.0.2")
 
     // Room integration
 
@@ -103,7 +114,17 @@ dependencies {
     ksp("androidx.room:room-compiler:$room_version")
 
     // gps integration
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 
-    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    // Google Maps integration
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 
+    // For GeoJSON serialization
+    implementation("com.google.code.gson:gson:2.10.1")
+
+
+    //flexbox integration
+
+    implementation ("com.google.android.flexbox:flexbox:3.0.0")
 }

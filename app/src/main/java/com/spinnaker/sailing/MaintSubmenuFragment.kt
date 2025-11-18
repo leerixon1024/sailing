@@ -42,18 +42,20 @@ class MaintSubmenuFragment : Fragment() , View.OnClickListener {
         view.findViewById<Button>(R.id.maintBoatFragment).setOnClickListener(this)
         view.findViewById<Button>(R.id.maintMarkFragment).setOnClickListener(this)
         view.findViewById<Button>(R.id.maintCourseFragment).setOnClickListener(this)
+        view.findViewById<Button>(R.id.manageRaceLogsFragment).setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
         when(v!!.id){
 
-            R.id.maintBoatFragment -> navController!!.navigate(R.id.action_maintSubmenuFragment_to_maintBoatFragment )
-            R.id.maintCourseFragment  -> navController!!.navigate(R.id.action_maintSubmenuFragment_to_maintCourseFragment )
-            R.id.maintMarkFragment -> navController!!.navigate(R.id.action_maintSubmenuFragment_to_maintMarkFragment  )
-            R.id.left_btn -> navController!!.popBackStack()
-            R.id.right_btn -> navController!!.navigate(R.id.action_maintSubmenuFragment_to_maintBoatFragment )
-            R.id.home_btn -> navController!!.navigate(R.id.mainFragment )
+            R.id.maintBoatFragment -> navController.navigate(R.id.action_maintSubmenuFragment_to_maintBoatFragment )
+            R.id.maintCourseFragment  -> navController.navigate(R.id.action_maintSubmenuFragment_to_maintCourseFragment )
+            R.id.maintMarkFragment -> navController.navigate(R.id.action_maintSubmenuFragment_to_maintMarkFragment  )
+            R.id.manageRaceLogsFragment -> navController.navigate(R.id.action_maintSubmenuFragment_to_raceLogFragment)
+            R.id.left_btn -> navController.popBackStack()
+            R.id.right_btn -> navController.navigate(R.id.action_maintSubmenuFragment_to_maintBoatFragment )
+            R.id.home_btn -> navController.navigate(R.id.mainFragment )
 
 
 
