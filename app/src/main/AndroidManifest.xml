@@ -18,10 +18,7 @@
         android:theme="@style/Theme.Sailing"
         tools:targetApi="31">
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB2afJB3H--Psm9ErApHTbzRg7290crXkI" />
-
+        
         <service
             android:name=".services.GpsLoggingService"
             android:foregroundServiceType="location" />
